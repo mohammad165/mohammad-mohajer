@@ -1,0 +1,473 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: #0f172a;  /* دارک مود پیش‌فرض */
+  color: #f1f5f9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+}
+
+/* لایت مود */
+body.light {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Actions - دکمه‌های کنار هم */
+.header-actions {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  z-index: 100;
+}
+
+/* دکمه دارک مود */
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);  /* تغییر: حاشیه روشن برای دارک مود */
+  background: #1e293b;  /* تغییر: پس‌زمینه تیره */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.icon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* لایت مود برای دکمه */
+body.light .icon-btn {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #1e293b;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* دکمه تغییر زبان */
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  height: 42px;
+  background: #1e293b;  /* تغییر: پس‌زمینه تیره پیش‌فرض */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #f1f5f9;
+}
+
+.lang-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* لایت مود برای دکمه زبان */
+body.light .lang-btn {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #1e293b;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin: 40px 0 60px 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+.hero p {
+  color: #94a3b8;  /* تغییر: رنگ روشن‌تر برای دارک مود */
+  font-size: 1.1rem;
+}
+
+/* لایت مود برای hero p */
+body.light .hero p {
+  color: #64748b;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 4px solid #60a5fa;  /* تغییر: رنگ آبی روشن‌تر برای دارک مود */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* لایت مود برای avatar */
+body.light .avatar {
+  border-color: #2563eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: #3b82f6;  /* تغییر: رنگ آبی روشن‌تر */
+  color: white;
+  border: none;
+}
+
+.btn.primary:hover {
+  background: #60a5fa;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn:not(.primary) {
+  background: transparent;
+  border: 1px solid #475569;  /* تغییر: حاشیه روشن برای دارک مود */
+  color: #f1f5f9;
+}
+
+.btn:not(.primary):hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* لایت مود برای دکمه‌ها */
+body.light .btn.primary {
+  background: #2563eb;
+}
+
+body.light .btn.primary:hover {
+  background: #1d4ed8;
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+body.light .btn:not(.primary) {
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+body.light .btn:not(.primary):hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1.5rem 0;
+  color: #f1f5f9;  /* تغییر: رنگ روشن برای دارک مود */
+}
+
+/* لایت مود برای h2 */
+body.light h2 {
+  color: #1e293b;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* CARD */
+.card {
+  background: #1e293b;  /* تغییر: پس‌زمینه تیره */
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin: 10px 0;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* لایت مود برای card */
+body.light .card {
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Skills Categories */
+.skills-category {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 1rem 0;
+  color: #f1f5f9;  /* تغییر: رنگ روشن */
+  border-left: 4px solid #60a5fa;  /* تغییر: رنگ آبی روشن */
+  padding-left: 0.75rem;
+}
+
+/* لایت مود برای skills-category */
+body.light .skills-category {
+  color: #1e293b;
+  border-left-color: #2563eb;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid.small {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid.small {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+
+/* CENTER */
+.center {
+  text-align: center;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  margin-top: 60px;
+  padding: 2rem 0;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.05);  /* تغییر: برای دارک مود */
+  transition: all 0.2s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.contact-item:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* لایت مود برای contact-item */
+body.light .contact-item {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light .contact-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.internal-link {
+  color: #60a5fa;  /* تغییر: رنگ آبی روشن */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.internal-link:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* لایت مود برای internal-link */
+body.light .internal-link {
+  color: #3b82f6;
+}
+
+body.light .internal-link:hover {
+  color: #2563eb;
+}
+
+.section-subtitle {
+  color: #94a3b8;  /* تغییر: برای دارک مود */
+  font-size: 1.1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* لایت مود برای section-subtitle */
+body.light .section-subtitle {
+  color: #6b7280;
+}
+
+.back-to-top {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #334155;  /* تغییر: برای دارک مود */
+}
+
+/* لایت مود برای back-to-top */
+body.light .back-to-top {
+  border-top-color: #e5e7eb;
+}
+
+.back-to-top .internal-link {
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .skills-category {
+    font-size: 1.1rem;
+  }
+
+  .header-actions {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+/* Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background: #60a5fa;  /* تغییر: برای دارک مود */
+  color: white;
+}
+
+/* لایت مود برای selection */
+body.light ::selection {
+  background: #2563eb;
+}
+
+/* ========== RTL Support (فارسی) ========== */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .header-actions {
+  right: auto;
+  left: 1rem;
+}
+
+[dir="rtl"] .skills-category {
+  border-left: none;
+  border-right: 4px solid #60a5fa;
+  padding-left: 0;
+  padding-right: 0.75rem;
+}
+
+body.light [dir="rtl"] .skills-category {
+  border-right-color: #2563eb;
+}
+
+[dir="rtl"] .contact-item:hover {
+  transform: translateX(-5px);
+}
+
+[dir="rtl"] .grid,
+[dir="rtl"] .grid.small {
+  direction: rtl;
+}
+
+[dir="rtl"] .buttons {
+  direction: rtl;
+}
+
+[dir="rtl"] .card {
+  text-align: right;
+
+}
+
+/* ========== LTR Support (انگلیسی) ========== */
+/* حذف قوانین اجباری راست‌چین/چپ‌چین */
