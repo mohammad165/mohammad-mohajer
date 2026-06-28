@@ -1,9 +1,8 @@
-// app/en/page.tsx (نسخه انگلیسی - کامل شده با iOS & SwiftUI)
+// app/en/page.tsx (نسخه انگلیسی - مطابق با فارسی)
 import Image from "next/image";
+import Header from "../components/Header";
 import { Mail, Phone } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import { SiSwift, SiApple } from "react-icons/si";
-import Header from "../components/Header";
 import ClientButtons from "../components/ClientButtons";
 import ProjectCard from "../components/ProjectCard";
 
@@ -17,15 +16,17 @@ export default function EnglishPage() {
                 <div className="hero-content">
                     <Image
                         src="/profile.jpg"
-                        alt="Maede Mohajer - iOS & Front-End Developer"
+                        alt="Mohammad Mohajer - iOS & Front-End Developer"
                         width={150}
                         height={150}
                         className="avatar"
                         priority
                     />
                     <h1>Mohammad Mohajer</h1>
-                    <p className="subtitle">📱 iOS Developer • Swift • SwiftUI • UIKit</p>
-                    <p className="subtitle1" style={{marginTop:10}}>💻 Front-End Developer • React.js • Next.js</p>
+                    <div className="subtitle-group">
+                        <p className="subtitle">iOS Developer • Swift • SwiftUI • UIKit</p>
+                        <p className="subtitle">Front-End Developer • React.js • Next.js</p>
+                    </div>
                     <ClientButtons />
                 </div>
             </section>
@@ -33,103 +34,165 @@ export default function EnglishPage() {
             {/* ABOUT SECTION */}
             <section id="about" className="card">
                 <h2>About Me</h2>
-                <p>
-                    I've been working as a freelance front-end developer for about two years — from a service company's website to an internal dashboard for managing orders. I built each one from scratch to delivery, always trying to provide a good user experience.
+
+                <p style={{ marginBottom: '1rem' }}>
+                    I'm Mohammad Mohajer. A Front-End and iOS Developer focused on SwiftUI, UIKit, and React.js.
+                </p>
+
+                <p style={{ marginBottom: '1rem' }}>
+                    From small projects to complex systems — always with a commitment to quality and on-time delivery.
+                </p>
+
+                <p style={{ marginBottom: '1rem' }}>
+                    Now I'm looking for a professional team to grow, learn, and build products that truly make a difference.
                 </p>
 
                 <p>
-                    <strong>For the past two years, I've been seriously diving into iOS app development</strong>, building native applications for iOS and iPadOS using <strong>SwiftUI</strong> and <strong>UIKit</strong>. I'm passionate about Apple's design philosophy, smooth user experiences, and the <strong>MVVM architecture</strong>. I always strive to follow Apple's best practices and Human Interface Guidelines in my projects.
-                </p>
-
-                <p>
-                    What freelancing really taught me is how to manage projects independently. I learned how to meet deadlines without sacrificing quality. Check out my <a href="#projects" className="internal-link">recent projects</a> below.
-                </p>
-
-                <p>
-                    Now I want to join a professional team. I'd love to work alongside more experienced developers, learn from them, and play a part in building something that actually helps people.
-                    <br />
-                    <a href="#contact" className="internal-link">Contact me</a> if you have an opportunity.
+                    <a href="#contact" className="internal-link">Get in Touch</a>
                 </p>
             </section>
 
             {/* PROJECTS SECTION */}
             <section id="projects">
                 <h2>My Projects</h2>
-                <p className="section-subtitle">Here are some of my recent works as an <strong>iOS and Front-End Developer</strong></p>
+                <p className="section-subtitle">Some of my recent projects as an <strong>iOS & Front-End Developer</strong></p>
 
                 {/* iOS Projects */}
-                <h3 className="skills-category">📱 iOS Projects</h3>
+                <h3 className="skills-category">iOS Projects</h3>
                 <div className="grid">
                     <ProjectCard
-                        name="Smart Notes"
-                        desc="SwiftUI • Core Data • CloudKit • iCloud Sharing • Advanced Search • Smart Tagging • Rich Text Editing"
+                        name="Royapi"
+                        desc="Swift • Core Data • Spotlight Search • Tagging"
                         link="#"
                     />
+
                     <ProjectCard
-                        name="Personal Budget Manager"
-                        desc="SwiftUI • Combine • Core Data • Interactive Charts • Smart Reminders • iCloud Sync • Expense Tracking"
+                        name="Urban Space Management"
+                        desc="SwiftUI • MapKit • Core Data • Charts • Sync"
                         link="#"
                     />
+
                     <ProjectCard
-                        name="Fitness Tracker App"
-                        desc="UIKit • HealthKit • Core Motion • Custom Animations • Widget • Local Notifications • Workout History"
+                        name="Fitness App"
+                        desc="UIKit • HealthKit • Core Motion • Widget • Animation"
                         link="#"
                     />
+
                     <ProjectCard
-                        name="Recipe Book"
-                        desc="SwiftUI • Core Data • CloudKit • Image Picker • Search & Filter • Favorites • Shopping List Generator"
+                        name="Simorgh"
+                        desc="Swift • Core Data • Mobile Payment • Finance"
+                        link="#"
+                    />
+
+                    <ProjectCard
+                        name="PayPod"
+                        desc="Swift • Core Data • Mobile Payment • Wallet"
                         link="#"
                     />
                 </div>
 
                 {/* Web Projects */}
-                <h3 className="skills-category">💻 Web Projects</h3>
+                <h3 className="skills-category">Web Projects</h3>
                 <div className="grid">
                     <ProjectCard
+                        name="Simorgh Trade"
+                        desc="React • Tailwind • Trading • Investment"
+                        link="https://stts.ir/"
+                    />
+
+                    <ProjectCard
+                        name="mybajet"
+                        desc="React • Tailwind • Budget • Expenses"
+                        link="https://mybajet.ir/"
+                    />
+
+                    <ProjectCard
                         name="Sahim"
-                        desc="React 18 • Axios • React Router • Tailwind CSS • Lucide Icons • Real-time dashboard with AJV validation & toast notifications"
+                        desc="React 18 • Axios • Validation • Notification"
                         link="http://iranmcs.ir/sahimnew"
                     />
+
                     <ProjectCard
                         name="Nikyar"
-                        desc="React 19 • TypeScript • Framer Motion • Styled Components • Corporate website with advanced animations & confetti effects"
+                        desc="React 19 • TypeScript • Framer • Animation"
                         link="https://iranmbm.ir/"
                     />
+
                     <ProjectCard
                         name="IranMJS"
-                        desc="React.js • Context API • Chart.js • Data visualization dashboard with advanced state management"
+                        desc="React • Chart.js • Dashboard • Visualization"
                         link="https://iranmjs.ir/"
                     />
+
                     <ProjectCard
                         name="IranCyar"
-                        desc="React.js • SASS • BEM • Clean architecture • Fully responsive from scratch"
+                        desc="React • SASS • Clean • Responsive"
                         link="https://irancyar.ir/"
                     />
+
                     <ProjectCard
                         name="DrAliAhmadi"
-                        desc="React.js • Tailwind CSS • BEM • Responsive • SEO optimized"
+                        desc="React • Tailwind • Appointment • Medical"
                         link="https://draliahmadii.ir/"
                     />
+
                     <ProjectCard
-                        name="Grand Bazaar"
-                        desc="React.js • Tailwind CSS • BEM • Responsive • SEO optimized • E-commerce UI"
+                        name="ezlink"
+                        desc="React • Tailwind • Links • Management"
+                        link="https://tosansoha.com/ezlink/"
+                    />
+
+                    <ProjectCard
+                        name="ezpay"
+                        desc="React • Tailwind • Payment • Gateway"
+                        link="https://ezpay.ir/"
+                    />
+
+                    <ProjectCard
+                        name="grand-bazaar"
+                        desc="React • Tailwind • Store • Marketplace"
                         link="https://grand-bazaar.ir/"
                     />
+
                     <ProjectCard
-                        name="My Budget"
-                        desc="React.js • Tailwind CSS • BEM • Responsive • SEO optimized • Financial Dashboard"
-                        link="https://mybajet.ir/"
+                        name="suna"
+                        desc="React • Tailwind • Services • Panel"
+                        link="https://pep.co.ir/suna/"
+                    />
+
+                    <ProjectCard
+                        name="avand"
+                        desc="React • Tailwind • Club • Customers"
+                        link="https://panel.avandclub.ir/"
+                    />
+
+                    <ProjectCard
+                        name="pep"
+                        desc="React • Tailwind • Finance • Payment"
+                        link="https://pep.co.ir/"
+                    />
+
+                    <ProjectCard
+                        name="podicom"
+                        desc="React • Tailwind • Communication • Content"
+                        link="https://pep.co.ir/podicom/"
+                    />
+
+                    <ProjectCard
+                        name="pay-pod"
+                        desc="React • Tailwind • Wallet • Mobile"
+                        link="https://web.pay-pod.ir/"
                     />
                 </div>
             </section>
 
-            {/* SKILLS SECTION - کامل با iOS & SwiftUI */}
+            {/* SKILLS SECTION - بدون آیکون */}
             <section id="skills">
                 <h2>Technical Skills</h2>
                 <p className="section-subtitle">Technologies and tools I work with daily</p>
 
                 {/* iOS Development */}
-                <h3 className="skills-category">📱 iOS Development</h3>
+                <h3 className="skills-category">iOS Development</h3>
                 <div className="grid small">
                     {[
                         "Swift 5.9",
@@ -151,23 +214,16 @@ export default function EnglishPage() {
                         "TestFlight",
                         "MVVM Architecture",
                         "SwiftLint",
-                        "Unit Testing (XCTest)",
-                        "UI Testing (XCUITest)",
-                        "Core Animation",
-                        "MapKit",
-                        "StoreKit",
-                        "Local Authentication (Face ID / Touch ID)"
+                        "Unit Testing (XCTest)"
                     ].map((s) => (
                         <div key={s} className="card center">
-                            {s.includes("Swift") ? <SiSwift className="inline-icon" /> :
-                                s.includes("UIKit") || s.includes("Core") || s.includes("Health") || s.includes("Map") || s.includes("Store") ? <SiApple className="inline-icon" /> : null}
                             {s}
                         </div>
                     ))}
                 </div>
 
                 {/* Front-End Core */}
-                <h3 className="skills-category">🎯 Front-End Core</h3>
+                <h3 className="skills-category">Front-End Core</h3>
                 <div className="grid small">
                     {["React.js", "Next.js", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3"].map((s) => (
                         <div key={s} className="card center">{s}</div>
@@ -175,7 +231,7 @@ export default function EnglishPage() {
                 </div>
 
                 {/* Styling & UI */}
-                <h3 className="skills-category">🎨 Styling & UI</h3>
+                <h3 className="skills-category">Styling & UI</h3>
                 <div className="grid small">
                     {["Tailwind CSS", "SASS/SCSS", "CSS Modules", "Framer Motion", "Responsive Design", "BEM", "Styled Components", "Human Interface Guidelines (HIG)"].map((s) => (
                         <div key={s} className="card center">{s}</div>
@@ -183,7 +239,7 @@ export default function EnglishPage() {
                 </div>
 
                 {/* Server Communication */}
-                <h3 className="skills-category">🔗 Server Communication</h3>
+                <h3 className="skills-category">Server Communication</h3>
                 <div className="grid small">
                     {["REST APIs", "Axios", "Fetch API", "URLSession", "Alamofire", "GraphQL (Apollo)", "WebSocket"].map((s) => (
                         <div key={s} className="card center">{s}</div>
@@ -191,49 +247,47 @@ export default function EnglishPage() {
                 </div>
 
                 {/* State Management */}
-                <h3 className="skills-category">📦 State Management</h3>
+                <h3 className="skills-category">State Management</h3>
                 <div className="grid small">
-                    {["Context API", "React Query", "useState", "useReducer", "SwiftUI @State", "@ObservedObject", "@EnvironmentObject", "Combine Publishers", "Redux Toolkit"].map((s) => (
+                    {["Context API", "React Query", "useState", "useReducer", "SwiftUI @State", "@ObservedObject", "@EnvironmentObject", "Combine Publishers"].map((s) => (
                         <div key={s} className="card center">{s}</div>
                     ))}
                 </div>
 
                 {/* Tools & Version Control */}
-                <h3 className="skills-category">🛠️ Tools & Version Control</h3>
+                <h3 className="skills-category">Tools & Version Control</h3>
                 <div className="grid small">
                     {[
-                        "🐙 Git & GitHub",
-                        "💻 VS Code",
-                        "⚡ WebStorm",
-                        "📦 npm / yarn",
-                        "▲ Vercel",
-                        "🔍 Chrome DevTools",
-                        "✅ ESLint",
-                        "✨ Prettier",
-                        "🐳 Postman",
-                        "📊 React DevTools",
-                        "🎨 Figma",
-                        "📝 Notion / Trello",
-                        "🍎 Xcode",
-                        "🔧 Swift Package Manager",
-                        "📱 TestFlight",
-                        "🛠️ Instruments",
-                        "🔍 Safari Web Inspector"
+                        "Git & GitHub",
+                        "VS Code",
+                        "WebStorm",
+                        "npm / yarn",
+                        "Vercel",
+                        "Chrome DevTools",
+                        "ESLint",
+                        "Prettier",
+                        "Postman",
+                        "React DevTools",
+                        "Figma",
+                        "Notion / Trello",
+                        "Xcode",
+                        "Swift Package Manager",
+                        "TestFlight"
                     ].map((s) => (
                         <div key={s} className="card center">{s}</div>
                     ))}
                 </div>
 
                 {/* Soft Skills */}
-                <h3 className="skills-category">💡 Soft Skills</h3>
+                <h3 className="skills-category">Soft Skills</h3>
                 <div className="grid small">
-                    {["Problem Solving", "Time Management", "Team Collaboration", "Attention to Detail", "Continuous Learning", "Effective Communication", "Design Thinking", "Agile Methodology", "Scrum"].map((s) => (
+                    {["Problem Solving", "Time Management", "Team Collaboration", "Attention to Detail", "Continuous Learning", "Effective Communication", "Design Thinking"].map((s) => (
                         <div key={s} className="card center">{s}</div>
                     ))}
                 </div>
             </section>
 
-            {/* CONTACT SECTION */}
+            {/* CONTACT SECTION - بدون آیکون */}
             <section id="contact" className="contact">
                 <h2>Get In Touch</h2>
                 <p className="section-subtitle">Let's work together on your next project</p>

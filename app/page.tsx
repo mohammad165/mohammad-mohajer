@@ -1,12 +1,10 @@
-// app/page.tsx (نسخه فارسی - کامل شده با SwiftUI)
+// app/page.tsx (نسخه فارسی - بدون آیکون)
 import Image from "next/image";
-import { Mail, Phone } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
-import { SiSwift, SiApple } from "react-icons/si";
 import Header from "./components/Header";
 import ClientButtons from "./components/ClientButtons";
 import ProjectCard from "./components/ProjectCard";
-
+import { Mail, Phone } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 export default function HomePage() {
     return (
         <div className="container" dir="rtl" lang="fa">
@@ -17,15 +15,17 @@ export default function HomePage() {
                 <div className="hero-content">
                     <Image
                         src="/profile.jpg"
-                        alt="محمد مهاجر - برنامه نویس iOS و فرانت اند"
+                        alt="عکس پروفایل محمد مهاجر"
                         width={150}
                         height={150}
                         className="avatar"
                         priority
                     />
                     <h1>محمد مهاجر</h1>
-                    <p className="subtitle">📱 توسعه دهنده iOS • Swift • SwiftUI • UIKit</p>
-                    <p className="subtitle" style={{marginTop:10}}>💻 توسعه دهنده فرانت اند • React.js • Next.js</p>
+                    <div className="subtitle-group">
+                        <p className="subtitle">توسعه دهنده iOS • Swift • SwiftUI • UIKit</p>
+                        <p className="subtitle">توسعه دهنده فرانت اند • React.js • Next.js</p>
+                    </div>
                     <ClientButtons />
                 </div>
             </section>
@@ -33,22 +33,23 @@ export default function HomePage() {
             {/* ABOUT SECTION */}
             <section id="about" className="card">
                 <h2>درباره من</h2>
-                <p>
-                    حدود هشت سالی می‌شود که به عنوان توسعه‌دهنده فرانت‌اند فریلنسر کار می‌کنم — از وبسایت یک شرکت خدماتی گرفته تا یک داشبورد داخلی برای مدیریت سفارش‌ها. همه‌شان را خودم از صفر تا تحویل پیش بردم و سعی کردم تجربه کاربری خوبی ارائه بدهم.
+
+                <p style={{ marginBottom: '1rem' }}>
+                    محمد مهاجر هستم. توسعه‌دهنده فرانت‌اند و iOS با تمرکز بر SwiftUI، UIKit و React.js.
+                </p>
+
+                <p style={{ marginBottom: '1rem' }}>
+                    از پروژه‌های کوچک شروع کردم تا سیستم‌های پیچیده؛
+                    همیشه با تعهد به کیفیت و تحویل به‌موقع.
+                </p>
+
+                <p style={{ marginBottom: '1rem' }}>
+                    امروز به دنبال تیمی حرفه‌ای هستم برای رشد، یادگیری
+                    و ساختن محصولاتی که واقعاً کاربردی باشند.
                 </p>
 
                 <p>
-                    <strong>از دو سال پیش به طور جدی وارد دنیای توسعه اپلیکیشن‌های iOS شدم</strong> و با <strong>SwiftUI</strong> و <strong>UIKit</strong> اپلیکیشن‌های بومی برای iOS و iPadOS توسعه می‌دهم. طراحی اپل، تجربه کاربری روان و معماری <strong>MVVM</strong> را خیلی دوست دارم و سعی می‌کنم بهترین تمرین‌های اپل را در پروژه‌هایم پیاده‌سازی کنم.
-                </p>
-
-                <p>
-                    چیزی که فریلنسری واقعاً به من یاد داد، مدیریت مستقل پروژه است. یاد گرفتم چطور به ضرب‌الاجل‌ها پایبند باشم بدون اینکه کیفیت فدا شود. نگاهی به <a href="#projects" className="internal-link">نمونه کارهای اخیر من</a> بیندازید.
-                </p>
-
-                <p>
-                    حالا می‌خواهم وارد یک تیم حرفه‌ای شوم. دوست دارم کنار توسعه‌دهندگان باتجربه‌تر کار کنم، از آن‌ها یاد بگیرم و در ساخت محصولی که واقعاً به کار مردم می‌آید، نقش داشته باشم.
-                    <br />
-                    <a href="#contact" className="internal-link">با من تماس بگیرید</a> اگر فرصتی دارید.
+                    <a href="#contact" className="internal-link">ارتباط با من</a>
                 </p>
             </section>
 
@@ -58,132 +59,141 @@ export default function HomePage() {
                 <p className="section-subtitle">برخی از جدیدترین پروژه‌های من به عنوان <strong>توسعه دهنده iOS و فرانت اند</strong></p>
 
                 {/* پروژه‌های iOS */}
-                <h3 className="skills-category">📱 پروژه‌های iOS</h3>
+                <h3 className="skills-category">پروژه‌های iOS</h3>
                 <div className="grid">
                     <ProjectCard
                         name="رویاپی"
-                        desc="Swift • Core Data  • جستجوی پیشرفته • تگ‌گذاری هوشمند"
+                        desc="Swift • Core Data • Spotlight Search • Tagging"
                         link="#"
                     />
+
                     <ProjectCard
                         name="مدیریت فضاهای شهرداری"
-                        desc="SwiftUI • Combine • Core Data • نمودارهای تعاملی • یادآوری‌های هوشمند • iCloud Sync"
+                        desc="SwiftUI • MapKit • Core Data • Charts • Sync"
                         link="#"
                     />
+
                     <ProjectCard
                         name="اپلیکیشن تناسب اندام"
-                        desc="UIKit • HealthKit • Core Motion • انیمیشن‌های سفارشی • Widget • اعلان‌های محلی"
-                        link="#"
-                    />
-                    <ProjectCard
-                        name="یادداشت‌های هوشمند"
-                        desc="SwiftUI • Core Data • CloudKit • اشتراک‌گذاری iCloud • جستجوی پیشرفته • تگ‌گذاری هوشمند"
+                        desc="UIKit • HealthKit • Core Motion • Widget • Animation"
                         link="#"
                     />
 
                     <ProjectCard
                         name="سیمرغ"
-                        desc="Swift • Core Data  • جستجوی پیشرفته • تگ‌گذاری هوشمند"
+                        desc="Swift • Core Data • پرداخت موبایل • مالی"
                         link="#"
                     />
+
                     <ProjectCard
                         name="پی پاد"
-                        desc="Swift • Core Data  • جستجوی پیشرفته • تگ‌گذاری هوشمند"
+                        desc="Swift • Core Data • پرداخت موبایل • کیف پول"
                         link="#"
                     />
-
-
                 </div>
 
                 {/* پروژه‌های وب */}
-                <h3 className="skills-category">💻 پروژه‌های وب</h3>
+                <h3 className="skills-category">پروژه‌های وب</h3>
                 <div className="grid">
                     <ProjectCard
-                        name="سمیرغ تجارت"
-                        desc="React.js • Tailwind CSS • BEM • واکنش‌گرا • بهینه‌سازی سئو"
+                        name="سیمرغ تجارت"
+                        desc="React • Tailwind • معاملات • سرمایه‌گذاری"
                         link="https://stts.ir/"
                     />
+
                     <ProjectCard
                         name="mybajet"
-                        desc="React.js • Tailwind CSS • BEM • واکنش‌گرا • بهینه‌سازی سئو"
+                        desc="React • Tailwind • بودجه • هزینه‌ها"
                         link="https://mybajet.ir/"
                     />
+
                     <ProjectCard
                         name="Sahim"
-                        desc="React 18 • Axios • Tailwind CSS • Lucide Icons • اعتبارسنجی با AJV • داشبورد لحظه‌ای با نوتیفیکیشن"
+                        desc="React 18 • Axios • اعتبارسنجی • نوتیفیکیشن"
                         link="http://iranmcs.ir/sahimnew"
                     />
+
                     <ProjectCard
                         name="Nikyar"
-                        desc="React 19 • TypeScript • Framer Motion • Styled Components • انیمیشن‌های پیشرفته • افکت کنفتی"
+                        desc="React 19 • TypeScript • Framer • انیمیشن"
                         link="https://iranmbm.ir/"
                     />
+
                     <ProjectCard
                         name="IranMJS"
-                        desc="React.js • Context API • Chart.js • داشبورد مصورسازی داده • مدیریت state پیشرفته"
+                        desc="React • Chart.js • داشبورد • مصورسازی"
                         link="https://iranmjs.ir/"
                     />
+
                     <ProjectCard
                         name="IranCyar"
-                        desc="React.js • SASS • BEM • معماری تمیز • کاملاً واکنش‌گرا از صفر"
+                        desc="React • SASS • تمیز • واکنش‌گرا"
                         link="https://irancyar.ir/"
                     />
+
                     <ProjectCard
                         name="DrAliAhmadi"
-                        desc="React.js • Tailwind CSS • BEM • واکنش‌گرا • بهینه‌سازی سئو"
+                        desc="React • Tailwind • نوبت‌دهی • پزشکی"
                         link="https://draliahmadii.ir/"
                     />
+
                     <ProjectCard
                         name="ezlink"
-                        desc="React.js • Tailwind CSS • BEM • واکنش‌گرا • بهینه‌سازی سئو"
+                        desc="React • Tailwind • لینک • مدیریت"
                         link="https://tosansoha.com/ezlink/"
                     />
+
                     <ProjectCard
                         name="ezpay"
-                        desc="React.js • Tailwind CSS • BEM • واکنش‌گرا • بهینه‌سازی سئو"
+                        desc="React • Tailwind • پرداخت • درگاه"
                         link="https://ezpay.ir/"
                     />
+
                     <ProjectCard
                         name="grand-bazaar"
-                        desc="React.js • Tailwind CSS • BEM • واکنش‌گرا • بهینه‌سازی سئو"
+                        desc="React • Tailwind • فروشگاه • بازارچه"
                         link="https://grand-bazaar.ir/"
                     />
+
                     <ProjectCard
                         name="suna"
-                        desc="React.js • Tailwind CSS • BEM • واکنش‌گرا • بهینه‌سازی سئو"
+                        desc="React • Tailwind • خدمات • پنل"
                         link="https://pep.co.ir/suna/"
                     />
+
                     <ProjectCard
                         name="avand"
-                        desc="React.js • Tailwind CSS • BEM • واکنش‌گرا • بهینه‌سازی سئو"
+                        desc="React • Tailwind • باشگاه • مشتریان"
                         link="https://panel.avandclub.ir/"
                     />
+
                     <ProjectCard
                         name="pep"
-                        desc="React.js • Tailwind CSS • BEM • واکنش‌گرا • بهینه‌سازی سئو"
+                        desc="React • Tailwind • مالی • پرداخت"
                         link="https://pep.co.ir/"
                     />
+
                     <ProjectCard
                         name="podicom"
-                        desc="React.js • Tailwind CSS • BEM • واکنش‌گرا • بهینه‌سازی سئو"
+                        desc="React • Tailwind • ارتباطات • محتوا"
                         link="https://pep.co.ir/podicom/"
                     />
+
                     <ProjectCard
                         name="pay-pod"
-                        desc="React.js • Tailwind CSS • BEM • واکنش‌گرا • بهینه‌سازی سئو"
+                        desc="React • Tailwind • کیف پول • موبایل"
                         link="https://web.pay-pod.ir/"
                     />
-
                 </div>
             </section>
 
-            {/* SKILLS SECTION - کامل با SwiftUI */}
+            {/* SKILLS SECTION - بدون آیکون */}
             <section id="skills">
                 <h2>مهارت‌های فنی</h2>
                 <p className="section-subtitle">فناوری‌ها و ابزارهایی که روزانه با آنها کار می‌کنم</p>
 
                 {/* iOS & SwiftUI */}
-                <h3 className="skills-category">📱 توسعه iOS</h3>
+                <h3 className="skills-category">توسعه iOS</h3>
                 <div className="grid small">
                     {[
                         "Swift 5.9",
@@ -208,15 +218,13 @@ export default function HomePage() {
                         "Unit Testing (XCTest)"
                     ].map((s) => (
                         <div key={s} className="card center">
-                            {s.includes("Swift") ? <SiSwift className="inline-icon" /> :
-                                s.includes("UIKit") || s.includes("Core") ? <SiApple className="inline-icon" /> : null}
                             {s}
                         </div>
                     ))}
                 </div>
 
                 {/* هسته فرانت اند */}
-                <h3 className="skills-category">🎯 هسته فرانت اند</h3>
+                <h3 className="skills-category">هسته فرانت اند</h3>
                 <div className="grid small">
                     {["React.js", "Next.js", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3"].map((s) => (
                         <div key={s} className="card center">{s}</div>
@@ -224,7 +232,7 @@ export default function HomePage() {
                 </div>
 
                 {/* استایل و UI */}
-                <h3 className="skills-category">🎨 استایل و رابط کاربری</h3>
+                <h3 className="skills-category">استایل و رابط کاربری</h3>
                 <div className="grid small">
                     {["Tailwind CSS", "SASS/SCSS", "CSS Modules", "Framer Motion", "طراحی واکنش‌گرا", "BEM", "Styled Components", "Human Interface Guidelines (HIG)"].map((s) => (
                         <div key={s} className="card center">{s}</div>
@@ -232,7 +240,7 @@ export default function HomePage() {
                 </div>
 
                 {/* ارتباط با سرور */}
-                <h3 className="skills-category">🔗 ارتباط با سرور</h3>
+                <h3 className="skills-category">ارتباط با سرور</h3>
                 <div className="grid small">
                     {["REST APIs", "Axios", "Fetch API", "URLSession", "Alamofire", "GraphQL (Apollo)", "WebSocket"].map((s) => (
                         <div key={s} className="card center">{s}</div>
@@ -240,7 +248,7 @@ export default function HomePage() {
                 </div>
 
                 {/* مدیریت State */}
-                <h3 className="skills-category">📦 مدیریت state</h3>
+                <h3 className="skills-category">مدیریت state</h3>
                 <div className="grid small">
                     {["Context API", "React Query", "useState", "useReducer", "SwiftUI @State", "@ObservedObject", "@EnvironmentObject", "Combine Publishers"].map((s) => (
                         <div key={s} className="card center">{s}</div>
@@ -248,31 +256,31 @@ export default function HomePage() {
                 </div>
 
                 {/* ابزارها و کنترل نسخه */}
-                <h3 className="skills-category">🛠️ ابزارها و کنترل نسخه</h3>
+                <h3 className="skills-category">ابزارها و کنترل نسخه</h3>
                 <div className="grid small">
                     {[
-                        "🐙 Git & GitHub",
-                        "💻 VS Code",
-                        "⚡ WebStorm",
-                        "📦 npm / yarn",
-                        "▲ Vercel",
-                        "🔍 Chrome DevTools",
-                        "✅ ESLint",
-                        "✨ Prettier",
-                        "🐳 Postman",
-                        "📊 React DevTools",
-                        "🎨 Figma",
-                        "📝 Notion / Trello",
-                        "🍎 Xcode",
-                        "🔧 Swift Package Manager",
-                        "📱 TestFlight"
+                        "Git & GitHub",
+                        "VS Code",
+                        "WebStorm",
+                        "npm / yarn",
+                        "Vercel",
+                        "Chrome DevTools",
+                        "ESLint",
+                        "Prettier",
+                        "Postman",
+                        "React DevTools",
+                        "Figma",
+                        "Notion / Trello",
+                        "Xcode",
+                        "Swift Package Manager",
+                        "TestFlight"
                     ].map((s) => (
                         <div key={s} className="card center">{s}</div>
                     ))}
                 </div>
 
                 {/* مهارت‌های نرم */}
-                <h3 className="skills-category">💡 مهارت‌های نرم</h3>
+                <h3 className="skills-category">مهارت‌های نرم</h3>
                 <div className="grid small">
                     {["حل مسئله", "مدیریت زمان", "همکاری تیمی", "توجه به جزئیات", "یادگیری مستمر", "ارتباط مؤثر", "تفکر طراحی (Design Thinking)"].map((s) => (
                         <div key={s} className="card center">{s}</div>
@@ -280,7 +288,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* CONTACT SECTION */}
+            {/* CONTACT SECTION - بدون آیکون */}
             <section id="contact" className="contact">
                 <h2>ارتباط با من</h2>
                 <div className="icons">

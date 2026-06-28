@@ -292,6 +292,9 @@ body.light .skills-category {
 /* CENTER */
 .center {
   text-align: center;
+  justify-content: center;
+  display: flex;
+
 }
 
 /* CONTACT */
