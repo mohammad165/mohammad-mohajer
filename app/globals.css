@@ -424,7 +424,7 @@ html {
 
 /* Selection */
 ::selection {
-  background: #60a5fa;  /* تغییر: برای دارک مود */
+  background: #60a5fa;
   color: white;
 }
 
@@ -472,5 +472,3 @@ body.light [dir="rtl"] .skills-category {
 
 }
 
-/* ========== LTR Support (انگلیسی) ========== */
-/* حذف قوانین اجباری راست‌چین/چپ‌چین */

@@ -1,19 +1,36 @@
-// app/sitemap.ts
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+import { getAllPosts} from "@/app/lib/posts";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+    const baseUrl = 'https://maedemohajer.ir';
+    const posts = await getAllPosts();
+
+    const postUrls = posts.map(post => ({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: 'weekly' as const,
+        priority: 0.7,
+    }));
+
     return [
         {
-            url: 'https://maedemohajer.ir',
+            url: baseUrl,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 1,
         },
         {
-            url: 'https://maedemohajer.ir/en',
+            url: `${baseUrl}/en`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
+        {
+            url: `${baseUrl}/blog`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        ...postUrls,
     ];
 }

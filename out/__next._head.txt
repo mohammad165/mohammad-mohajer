@@ -1,6 +1,0 @@
-1:"$Sreact.fragment"
-2:I[88157,["/_next/static/chunks/0_6qx_b.xn6rm.js","/_next/static/chunks/03oggdv2scqn9.js"],"ViewportBoundary"]
-3:I[88157,["/_next/static/chunks/0_6qx_b.xn6rm.js","/_next/static/chunks/03oggdv2scqn9.js"],"MetadataBoundary"]
-4:"$Sreact.suspense"
-5:I[51716,["/_next/static/chunks/0_6qx_b.xn6rm.js","/_next/static/chunks/03oggdv2scqn9.js"],"IconMark"]
-0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"محمد مهاجر | برنامه نویس فرانت اند"}],["$","meta","1",{"name":"description","content":"رزومه و نمونه کارهای محمد مهاجر، برنامه نویس متخصص React.js و Next.js"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.12r7t1dqr-l20.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L5","3",{}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"yi152Vp40Vz5RrMx1q870"}
